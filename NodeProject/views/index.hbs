@@ -1,1 +1,23 @@
 <h1>Index HBS</h1>
+
+{{#if tests.length}}
+<ul>
+    {{#each tests}}
+        <li>
+            <label>
+                {{#if completed}}
+                <input type="checkbox" checked>
+                <span class="completed">{{title}}</span>
+                {{else}}
+                <input type="checkbox">
+                <span>{{title}}</span>
+                {{/if}}
+
+                <button class="btn btn-small">Save</button>
+            </label>
+        </li>
+    {{/each}}
+{{else}}
+</ul>
+<h2>No</h2>
+{{/if}}

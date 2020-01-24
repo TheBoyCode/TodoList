@@ -3,6 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const exphbs = require('express-handlebars')
+const testRoutes = require('./routes/test')
 
 const PORT = process.env.PORT || 3000
 
@@ -16,6 +17,7 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
+app.use(testRoutes)
 
 async function start() {
   try {
