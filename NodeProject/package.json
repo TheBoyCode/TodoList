@@ -1,0 +1,26 @@
+{
+  "name": "nodeproject",
+  "version": "1.0.0",
+  "description": "Node JS test ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "node",
+    "node.js"
+  ],
+  "author": "Miller <miller@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.7.2",
+    "mongoose": "^5.8.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
