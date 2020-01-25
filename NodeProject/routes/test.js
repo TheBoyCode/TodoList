@@ -15,4 +15,18 @@ router.get('/create',(req,res) => {
         isCreate: true
     })
 })
+router.post('/create', async (req, res) => {
+    const todo = new Test({
+        title: req.body.title
+    })
+  
+    await todo.save()
+    res.redirect('/')
+})
+router.post('/completed', async (req, res) => {
+    const todo = await Test.findById(req.body.id)
+    todo.completed = !!req.body.completed
+    await todo.save()
+    res.redirect('/')
+})
 module.exports = router
