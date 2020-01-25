@@ -4,7 +4,7 @@ const router = Router()
 router.get('/', async(req,res) => {
     const tests  = await Test.find({})
     res.render('index',{
-        title: 'Test',
+        title: 'List',
         isIndex: true,
         tests
     })
